@@ -1,0 +1,883 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/*..... responsive carousel bootstrap kiegészítés .....*/
+.my-carousel {
+  padding-top: 70px;
+  margin: 0% 10% 0% 10%;
+}
+.carouselIMG {
+  max-height: 600px;
+}
+.carouselBackG{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0.9;
+  background: #333;
+  
+}
+.carouselBackG h5 {
+  color:white;
+  /*-webkit-text-stroke: 0.3px black;*/
+  opacity: 1.4;
+}
+.carouselBackG p {
+  color: white;
+  /*-webkit-text-stroke: 0.3px black;*/
+  opacity: 1.4;
+}
+
+/*.. MY container ..*/
+.my-container {
+  max-width: 90%;
+  /*width: 90%;*/
+  margin: auto;
+}
+.my-container2{
+  padding-top: 20px;
+  max-width: 90%;
+  margin: auto;
+}
+.my-container3{
+  padding-top: 20px;
+  max-width: 100%;
+  margin: auto;
+}
+.my-container4{
+  padding-top: 20px;
+  max-width: 90%;
+  margin: auto;
+}
+/* ............navbar asztali............ */
+.my-navbar input[type="checkbox"],
+.my-navbar .my-hamburger-lines {
+  display: none;
+}
+
+.my-navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  height: 60px;
+  z-index: 12;
+}
+
+.my-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.my-menu-items {
+  order: 2;
+  display: flex;
+}
+
+.my-menu-items li {
+  list-style: none;
+  margin-top: 1rem;
+  margin-left: 1.4rem;
+  font-size: 1.2rem;
+}
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+.my-menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(#0069B4 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+}
+
+.my-menu-items a:hover {
+  color: rgb(14, 105, 180);
+  transition: color 0.3s ease-in-out;
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+.my-logo {
+  order: 1;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+
+}
+/*...asztal foglalás....*/
+.my-form{
+  margin-bottom: 1%;
+}
+.my-textarea{
+  height: 100px;
+}
+.my-buttonFlex{
+  display: flex;
+  justify-content: flex-start;
+}
+.my-buttonF{
+  width: 250px;
+}
+
+/* ......//Rólunk//...... */
+.my-container3 h2{
+  text-align: center;
+  margin: 0px;
+}
+.my-container2 h2{
+  text-align: center;
+  margin: 0px;
+}
+.my-container2 p{
+  padding: 50px;
+  text-align: justify;
+  margin: 0px;
+}
+.my-containerColor{
+  background: #f5f5f7;
+}
+#about {
+  padding: 50px 0;
+  background: #f5f5f7;
+}
+#about2{
+  padding: 50px 0;
+  
+}
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*#about h2 {
+  font-size: 2.3rem;
+}*/
+
+#about,#about2 p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#about,#about2 .small {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1.3s ease-in-out forwards;
+}
+
+
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-text {
+  text-align: justify;
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1.3s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  display: block;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 50%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+/*..fordított rolunk2...*/
+
+.aboutF-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(-150%);
+  animation: about-img-animation 1.3s ease-in-out forwards;
+}
+
+@keyframes aboutF-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.aboutF-text {
+  text-align: justify;
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(150%);
+  animation: about-text-animation 1.3s ease-in-out forwards;
+}
+
+@keyframes aboutF-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.aboutF-img img {
+  display: block;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 50%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+  
+}
+/*....paralax....*/
+.parallax {
+  
+  background: url(./images/rolunk/inimg.jpg);
+
+  /* Full height */
+  height: 300px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax2 {
+  
+  background: url(./images/rolunk/outimg.jpg);
+
+  /* Full height */
+  height: 200px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax3 {
+  
+  background: url(./images/rolunk/sutoimg.jpg);
+
+  /* Full height */
+  height: 250px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ..........étel választék........... */
+
+#food {
+  margin-top: 2rem;
+  padding: 2rem 0 6rem 0;
+  background: rgba(243, 243, 243);
+}
+
+#food h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.food-container {
+  display: flex;
+  justify-content: space-between;
+  width: 83%;
+}
+
+.food-container img {
+  display: block;
+  width: 100%;
+  /*max-width: 1200px;*/
+  margin: auto;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-container {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.img-content a {
+  font-size: 1.2rem;
+}
+
+.img-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.img-container:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}
+
+/* ........./ Kamu vélemények a weblapról /.......... */
+
+#testimonials {
+  padding: 5rem 0;
+  
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.testimonial-box .checked {
+  color: #ff9529;
+}
+
+.testimonial-box .testimonial-text {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.testimonial-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.customer-photo img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: auto;
+}
+/*......google térkép.....*/
+footer{
+  margin-top: 2rem;
+  padding: 2rem 0 6rem 0;
+  background: rgba(243, 243, 243);
+  
+}
+footer h2{
+  padding-top: 3%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+iframe{
+  margin-left: 3%;
+  height: 500px;
+  width: 48%;
+  /*filter: invert(100%);*/
+}
+.my-map{
+  display: flex;
+  justify-content: space-between;
+  align-content: start;
+  flex-direction: row;
+
+}
+.my-IframG{
+  width: 48%;
+  height: 450px;
+}
+
+.myContact{
+  height: 500px;
+  width: 48%;
+}
+.myContact p{
+  margin-left: 4%;
+ }
+.myGoogleMap{
+  padding-top: 20px;
+}
+.myGoogleMap h2{
+  padding-top: 3%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+.videoGyongyos{
+  margin-top: 2rem;
+  padding: 2rem 0 6rem 0;
+  background: rgba(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.videoGyongyos iframe{
+  margin-left: 5%;
+  width: 90%;
+  max-height: 700px;
+}
+.videoGyongyos h2{
+  padding-top: 3%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+.videoGyongyos p{
+  margin-left: 10%;
+  width: 80%;
+  padding-top: 3%;
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/*.........../belépés aloldal/.......*/
+
+.my-body {
+    /*background: #f5f5f5;*/
+    background: white;
+    padding-top: 70px;  
+}
+
+
+@media only screen and (max-width: 767px) {
+  .hide-on-mobile {
+      display: none;
+  }
+}
+
+.login-box {
+  /*background: url(https://i.imgur.com/73BxBuI.png);*/
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  /*margin: 50px; auto;*/
+  min-height: 700px;
+  -webkit-box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: "Script MT";
+  font-size: 54px;
+  text-align: center;
+  color: #888888;
+  margin-bottom: 50px;
+}
+
+.logo .logo-font {
+  color: #3BC3FF;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+      font-size: 34px;
+  }
+}
+.my-button{
+  width: 100%;
+}
+.header-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.login-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form .form-control {
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+
+.login-form .form-group {
+  position: relative;
+}
+.forgot-password{
+  font-size: 0.8rem;
+}
+.login-form .form-group .forgot-password {
+  position: absolute;
+  top: 23%;
+  right: 5px;
+}
+
+.login-form .btn {
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.login-form .btn.btn-primary {
+  background: #3BC3FF;
+  border-color: #31c0ff;
+}
+
+.slider-feature-card {
+  background: #fff;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 25px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.slider-feature-card img {
+  height: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.slider-feature-card h3,
+.slider-feature-card p {
+  margin-bottom: 30px;
+}
+
+
+/*....Regisztráció....*/
+.my-signStyle{
+  margin-top: 60px;
+  background-color: #fff;
+}
+/* ......../ media query /.......... */
+@media (max-width: 1200px){
+
+  /*...étel és ital választék...*/
+  .img-content h3 {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 800px) {
+  
+  
+  .my-navbar {
+    opacity: 0.95;
+  }
+
+  .my-navbar-container input[type="checkbox"],
+  .my-navbar-container .my-hamburger-lines {
+    display: block;
+  }
+
+  .my-navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .my-navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .my-navbar-container .my-hamburger-lines {
+    display: block;
+    height: 25px; /*23px*/
+    width: 33px; /*35*/
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .my-navbar-container .my-hamburger-lines .my-line {
+    display: block;
+    height: 6px; /*4px*/
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .my-navbar-container .my-hamburger-lines .my-line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .my-navbar-container .my-hamburger-lines .my-line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .my-navbar-container .my-hamburger-lines .my-line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .my-navbar .my-menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .my-navbar .my-menu-items li {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .my-logo {
+    position: absolute;
+    top: 15%;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .my-navbar-container input[type="checkbox"]:checked ~ .my-menu-items {
+    transform: translateX(0);
+  }
+
+  .my-navbar-container
+    input[type="checkbox"]:checked
+    ~ .my-hamburger-lines
+    .my-line1 {
+    transform: rotate(38deg); /*35*/
+  }
+
+  .my-navbar-container
+    input[type="checkbox"]:checked
+    ~ .my-hamburger-lines
+    .my-line2 {
+    transform: scaleY(0);
+  }
+
+  .my-navbar-container
+    input[type="checkbox"]:checked
+    ~ .my-hamburger-lines
+    .my-line3 {
+    transform: rotate(-38deg); /*35*/
+  }
+
+  /* ......./ étel ittal választék /......... */
+
+  #food h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+   .img-content h3 {
+    color: #fff;
+    font-size: 3.5rem;
+  }
+  .food-container {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 80%;
+  }
+
+  .food-type:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  .food-type {
+    box-shadow: 5px 5px 10px 0 #aaa;
+  }
+
+  .img-container {
+    margin: 0;
+  }
+  .testimonial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .my-map{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.myContact{
+  margin-top: 30px;
+  height: 300px;
+  width: 90%;
+  text-align: center;
+  padding-left: 5%;
+}
+.my-IframG{
+  padding-left: 5%;
+  width: 90%;
+  height: 450px;
+}
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 65%;
+  }
+  .my-navbar .my-menu-items {
+    max-width: 240px;
+  }
+  .my-navbar .my-menu-items li {
+    font-size: 1.6rem;
+  }
+ 
+  .my-logo {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    font-size: 2.2rem;
+  }
+
+  .my-navbar .my-menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .testimonial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .my-buttonF{
+    width: 100%;
+  }
+
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 65%;
+  }
+  .my-navbar .my-menu-items {
+    max-width: 200px;
+  }
+  .my-navbar .my-menu-items li {
+    font-size: 1.6rem;
+  }
+  
+  .testimonial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .my-logo {
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    font-size: 1.8rem;
+  }
+
+  .my-navbar .my-menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
