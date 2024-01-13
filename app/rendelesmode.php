@@ -2,8 +2,13 @@
 if (isset($_SESSION["idfelhasznalo"])){
     include_once '../app/rendeleskiir.php';
     include_once '../app/rendelesbeir.php';
-    if(isset($allapot)&&$azonosito){
-        print "<h1>Véglegesítsd a rendelésed!</h1>";
+    if(isset($allapot)&& isset($azonosito)){
+        print '
+        <div class="title">
+            <h2>Rendelés véglegesítése</h2>
+            <div class="underline"></div>
+            
+        </div>';
         //print "<br>";
        // print $azonosito;
         //print "<br>";
@@ -14,10 +19,19 @@ if (isset($_SESSION["idfelhasznalo"])){
         include_once '../app/rendelttermekek.php';
         
     }else{
-        print "<h1>Még nem rendeltél!</h1>";
+        print '
+        <div class="title">
+            <h2>Még nem rendeltél!</h2>
+            <div class="underline"></div>
+        </div>';
     }
 }else{
-    print "<h1>Lépj be hogy rendelhes!</h1>";
+    print '
+        <div class="title">
+            <h2>Lépj be hogy rendelhes!</h2>
+            <div class="underline"></div>
+        </div>';
+    
 }
     /* 
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

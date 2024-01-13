@@ -1,6 +1,6 @@
 <?php
 $sqlRendelesUpdate = "UPDATE rendeles
-                       SET mennyiseg = '" .$mennyiseg."'
+                       SET mennyiseg = '" .$mennyiseg."', allapot = 0
                        WHERE azonosito = '" .$azonositoUP."' AND 
                                            felhasznalo_idfelhasznalo='" . $felhasznaloid. "' AND
                                            termekek_idtermekek='" . $termekid . "'";

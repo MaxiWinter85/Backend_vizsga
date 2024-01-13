@@ -2,7 +2,7 @@
 if(isset($_SESSION["idfelhasznalo"])){
             print "<form class='my-btnForm' action='./rendeles.php' method='GET'>
                 <input type='hidden'  name='termek' value='".$id."'>
-                <button type='submit' class='btn'>Rendelés</button>
+                <button type='submit' class='btn'>Kosárba</button>
                 </form>";
 }else{
             print "<form class='my-btnForm' action='./belepes.php' method='GET'>

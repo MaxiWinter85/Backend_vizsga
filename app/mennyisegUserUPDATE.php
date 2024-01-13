@@ -20,6 +20,10 @@ if($resultEllenorzesUP){
                     /*while($rowRendeltTermekUP= mysqli_fetch_assoc($resultEllenorzesUP)) {
                         $mennyiseg = $rowRendeltTermekUP['mennyiseg'];
                         $mennyiseg += 1;
+                    }
+                    $allapot = $rowtermekek["allapot"];
+                    if($mennyiseg > 0 && $allapot == 3){
+                        $mennyiseg = 1;
                     }*/
                     include_once '../app/mennyisegUPDATE.php';
                     header('location: http://localhost/pizzafaloda/page/rendeles.php');

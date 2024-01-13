@@ -10,22 +10,19 @@ foreach ($ids as $id) {
         $resultRendeltTermek = mysqli_query($conn,$sqlRendeltTermek);
         if($resultRendeltTermek){
         if (mysqli_num_rows($resultRendeltTermek) > 0 ) {
-            
             while($rowRendeltTermek = mysqli_fetch_assoc($resultRendeltTermek)) {
                 $kep = $rowRendeltTermek['kep'];
                 $termeknev = $rowRendeltTermek['termeknev'];
                 $ar = $rowRendeltTermek["ar"];
                 $darab = $rowRendeltTermek["mennyiseg"];
-                print "<br>";
-                print $kep;
-                print "<br>";
-                print $termeknev;
-                print "<br>";
-                print $ar." Ft";
-                print "<br>";
-                print '<form action="../app/mennyisegUserUPDATE.php" method="GET">
-                        <input type="number" name="mennyiseg" value="'.$darab.'"> db
-                        <input type="hidden"  name="id" value="'.$id.'"><br>';
+                print "<div class='rendelesContainer'>";
+                print "<img src=".$kep." alt=".$termeknev."   " . " class='rendelesKep'>";
+                
+                print '<div class="rendelesTNEV">'.$termeknev.'</div>';
+                print '<div class="rendelesAR">'.$ar.' Ft</div>';
+                print ' <form class="rendelesDarab" action="../app/mennyisegUserUPDATE.php" method="GET">
+                        <input class="rendelesARbevitel" type="number" name="mennyiseg" value="'.$darab.'"> db
+                        <input type="hidden"  name="id" value="'.$id.'">';
                 if(isset($azonositoNEW)){
                     $azonositoUP = $azonositoNEW;
                     print '<input type="hidden"  name="azonositoUP" value="'.$azonositoUP.'">';
@@ -33,10 +30,10 @@ foreach ($ids as $id) {
                     $azonositoUP = $azonosito;
                     print '<input type="hidden"  name="azonositoUP" value="'.$azonositoUP.'">';
                 }       
-                print ' <input  type="submit" value="OK"><br>
+                print ' 
                  </form>';
-               
-                print '<form action="../app/rendelesStatusz.php" method="GET">
+               /*<input  type="submit" class="btn" value="OK"><br>*/
+                print '<form class="rendelesTorles" action="../app/rendelesStatusz.php" method="GET">
                         <input type="hidden"  name="id" value="'.$id.'">
                         <input type="hidden"  name="delete" value=3>';
                         if(isset($azonositoNEW)){
@@ -46,16 +43,21 @@ foreach ($ids as $id) {
                         $azonositoUP = $azonosito;
                         print '<input type="hidden"  name="azonositoUP" value="'.$azonositoUP.'">';
                     }                    
-                    print ' <input  type="submit" value="Törlés"><br>
-                    </form>';
+                    print ' <input  type="submit" class="btn" value="Törlés"><br>
+                    </form>
+                    </div>';
+                
                     print "<hr>";
+                print "</article>";
                 }
             }    
         }
     $osszesen += ($ar*$darab);
     }
-    print "Összesen: ".$osszesen."Ft";
-    print '<form action="../app/rendelesVeglelgesites.php" method="GET">';
+    print "<div>
+            <div class='osszesen'>Összesen: ".$osszesen."Ft</div><br>
+            </div>";
+    print '<form class="rendlesGomb" action="../app/rendelesVeglelgesites.php" method="GET">';
                     print' <input type="hidden"  name="rendelesV" value=1>';
                         if(isset($azonositoNEW)){
                             $azonositoUP = $azonositoNEW;
@@ -64,7 +66,7 @@ foreach ($ids as $id) {
                                 $azonositoUP = $azonosito;
                                 print '<input type="hidden"  name="azonositoUP" value="'.$azonositoUP.'">';
                             }                    
-                    print ' <input  type="submit" value="Megrendelés"><br>
+                    print ' <input  type="submit" class="btn" value="Megrendelés"><br>
                     </form>';
     mysqli_close($conn);
 /* 

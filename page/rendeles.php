@@ -13,6 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         headPage();
         ?>
         <title>Kapcsolat</title>
+        <link rel="stylesheet" href="../rendeles.css">
     </head>
     <body>
         <?php
@@ -26,6 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         
         //print $_GET['termek'];
         print "</br>";
+        
         include_once '../app/rendelesmode.php';
         ?>
         
