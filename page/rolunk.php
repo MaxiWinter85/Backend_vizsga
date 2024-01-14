@@ -20,21 +20,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         $navbar = new navbar();
         $navbar->navbarPage();
         include_once '../app/weblapSQLTartalom.php';
-        /*print "<br>";
-        print "<br>";
-        print "<br>";
-        print "<br>";
-        print "<br>";
-        
-        
-        print weblapSQLTartalom(1);
-        print '<br>';
-        print weblapSQLTartalom(2);*/
-        
-        //require '../app/weblapSQLlekerdezes.php';
-        //$id = weblapSQLTartalom(2);
-        
-        //mysqli_close($conn);
         ?>
         <!----A tulaj és a szakácsokról egy kis paralax és a animatio-->
         <div class="parallax2"></div>

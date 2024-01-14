@@ -21,6 +21,7 @@
                         $_SESSION["teljesnev"] = $rowBejelentkezes['teljesnev'];
                         $email = $rowBejelentkezes['email'];
                         $szerkeszto = $rowBejelentkezes['szerkeszto'];
+                        $_SESSION['szerkeszto'] = $szerkeszto;
                         $_SESSION["felhasznalonev"] = $rowBejelentkezes["felhasznalonev"];
                             if($szerkeszto == 1){
                                 header('location: http://localhost/pizzafaloda/app/admin.php');
