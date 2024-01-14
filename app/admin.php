@@ -56,6 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
      print "  
     </body>
 </html>";
+       
 }else{
     header('location: http://localhost/pizzafaloda/index.php');
 }     

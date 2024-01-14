@@ -5,6 +5,7 @@ if(isset($_GET['tartalom']) && isset($_GET['id'])){
                                    SET tartalom = '" .$_GET['tartalom']."'
                                    WHERE idweblapTartalom = '" .$_GET['id']."'";
                                 $update = mysqli_query($conn, $sqlTartalomUpdate);
+                                mysqli_close($conn);
             header('location: http://localhost/pizzafaloda/app/admin.php');
 }else{
             include '../app/db.php';
@@ -12,6 +13,7 @@ if(isset($_GET['tartalom']) && isset($_GET['id'])){
                                    SET elnevezes = '" .$_GET['tartalom2']."'
                                    WHERE idweblapTartalom = '" .$_GET['id']."'";
                                 $update = mysqli_query($conn, $sqlTartalomUpdate);
+                                mysqli_close($conn);
             header('location: http://localhost/pizzafaloda/app/admin.php');
 }
 /* 

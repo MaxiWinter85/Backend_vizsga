@@ -14,6 +14,7 @@
                             $tartalom ="A weblap szerkesztés alatt";
                         }
                         }
+                    mysqli_close($conn);
                     }
                 }
             return $tartalom;
@@ -33,6 +34,7 @@
                             $elnevezes = "A weblap szerkesztés alatt";
                         }
                         }
+                    mysqli_close($conn);
                     }
                 }
             return $elnevezes;
